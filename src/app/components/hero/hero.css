@@ -7,7 +7,8 @@
 }
 .title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin: 3rem;
 
 }
 .hero__image, .or {
@@ -30,8 +31,7 @@
   margin-top: 1rem;
 }
  .description {
-   font-size: 1.5rem;
-   margin: 2.5rem 5rem;
+   margin: 3rem;
    line-height: auto;
    text-align: center;
 

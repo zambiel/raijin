@@ -12,12 +12,49 @@
 .titlePrototype {
   margin: 3rem;
   text-align: center;
+  font-size: 3rem;
 }
 
-.final {
-  margin: 1rem 5rem 1rem 3rem;
+.subtitle {
+  font-size: 2.5rem;
+  text-align: center;
 }
 
+.info3 {
+  text-align: center;
+  margin: 3rem;
+}
+
+.info1 {
+  line-height: 4rem;
+  text-align: center;
+}
+
+.info2 {
+  line-height: 4rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .info1 {
+      margin-right: 9rem;
+      text-align: start;
+  }
+  .info2 {
+    text-align: start;
+  }
+  .info3 {
+      margin: 1rem 5rem 1rem 3rem;
+      text-align: start;
+  }
+  .titlePrototype {
+    font-size: 3rem;
+  }
+  .subtitle {
+    text-align: start;
+    font-size: 2.2rem;
+  }
+}
 
 @media (min-width: 992px) {
 
@@ -40,7 +77,7 @@
     gap: 1.5rem;
     margin: 2rem 5rem;
   }
-  .final {
+  .info3 {
     margin-left: 5rem;
   }
 
@@ -52,18 +89,4 @@
     margin-top: -20rem;
     z-index: 1;
   }
-}
-
-
-
-
-
-
-.info1 {
-  line-height: 4rem;
-  margin-right: 9rem;
-}
-
-.info2 {
-  line-height: 4rem;
 }

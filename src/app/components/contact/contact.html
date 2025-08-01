@@ -1,21 +1,21 @@
 <section class="section-contact">
   <h2 class="titleContact">{{translate.translate('titleContact')}}</h2>
 
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate class="form">
+  <form [formGroup]="formulario" (ngSubmit)="enviar()" novalidate class="form">
     <div class="data">
       <div class="form-group">
         <label for="name">{{translate.translate('name')}}</label>
-        <input class="inputs" type="text" formControlName="nombre" id="name">
-        <div *ngIf="contactForm.get('nombre')?.touched && contactForm.get('nombre')?.invalid" style="color: red;">
+        <input required class="inputs" type="text" formControlName="nombre" id="name">
+        <div *ngIf="formulario.get('nombre')?.touched && formulario.get('nombre')?.invalid" style="color: red;">
           {{translate.translate('errorName')}}
         </div>
       </div>
       <div class="form-group">
         <label for="email">{{translate.translate('email')}}</label>
-        <input class="inputs" type="email" formControlName="email" id="email">
-        <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid" style="color: red;">
-        <div *ngIf="contactForm.get('email')?.errors?.['required']">{{translate.translate('errorEmail2')}}</div>
-        <div *ngIf="contactForm.get('email')?.errors?.['email']">{{translate.translate('errorEmail')}}</div>
+        <input required class="inputs" type="email" formControlName="email" id="email">
+        <div *ngIf="formulario.get('email')?.touched && formulario.get('email')?.invalid" style="color: red;">
+        <div *ngIf="formulario.get('email')?.errors?.['required']">{{translate.translate('errorEmail2')}}</div>
+        <div *ngIf="formulario.get('email')?.errors?.['email']">{{translate.translate('errorEmail')}}</div>
     </div>
       </div>
       <div class="form-group">
@@ -25,13 +25,13 @@
     </div>
     <div class="form-group">
       <label for="name">{{translate.translate('message')}}</label>
-      <textarea formControlName="mensaje" rows="10" name="message" id="message"></textarea>
-      <div *ngIf="contactForm.get('mensaje')?.touched && contactForm.get('mensaje')?.invalid" style="color: red;">
+      <textarea formControlName="mensaje" rows="10" name="message" required id="message"></textarea>
+      <div *ngIf="formulario.get('mensaje')?.touched && formulario.get('mensaje')?.invalid" style="color: red;">
         {{translate.translate('errorMessage')}}
       </div>
     </div>
     <div class="row">
-      <button type="submit" class="btn btn-secondary btn-send">{{translate.translate('sendBtn')}}</button>
+      <button type="submit" class="btn btn-secondary btn-send" [disabled]="formulario.invalid">{{translate.translate('sendBtn')}}</button>
       <div class="icons">
         <a href="https://www.youtube.com/@RaijinCarConversions" target="_blank" rel="noopener">
           <img src="/icons/youtube.svg" height="40" alt="1">
@@ -44,7 +44,7 @@
         </a>
       </div>
     </div>
-    <div *ngIf="enviadoConExito" style="color: green; margin-top: 1rem; font-size: 1.7rem;">
+    <div *ngIf="enviado" style="color: green; margin-top: 1rem; font-size: 1.7rem;">
       {{translate.translate('success')}}
     </div>
   </form>

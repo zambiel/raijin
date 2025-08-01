@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Translate } from '../../services/translate';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-hero',

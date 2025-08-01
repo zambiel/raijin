@@ -1,6 +1,8 @@
 .textStory {
   line-height: 3.5rem;
+  text-align: center;
 }
+
 
 .history {
   margin: 3rem;
@@ -26,6 +28,7 @@
 
     .textStory {
       margin: 0;
+      text-align: start;
     }
 
     .content {
