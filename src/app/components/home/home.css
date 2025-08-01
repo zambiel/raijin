@@ -1,0 +1,128 @@
+.header {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+  /* Solo visible en móviles */
+}
+
+.hamburger img {
+  width: 24px;
+  height: 24px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4.4rem;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation__link:hover {
+  text-decoration: underline;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    /* 👈 Asegura que se muestre el botón en móvil */
+  }
+
+  .navigation {
+    display: none;
+    /* oculto por defecto en móviles */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2e2e2e;
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .navigation__link {
+    color: white;
+  }
+
+  .navigation.navigation--open {
+    display: flex;
+  }
+
+  .btn.btn-primary {
+    display: none;
+    /* Oculta botón de contacto en móviles si quieres */
+  }
+}
+/*
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4.4rem;
+} */
+
+.background-footer {
+  background-color: var(--background);
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 0px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.navigation-footer, .social-links, .nav-privacy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header__logo {
+  align-self: center;
+}
+
+.privacy, .nav, .social {
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .background-footer {
+    display: block;
+    padding: 0;
+  }
+  .footer {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 2.5rem;
+
+    }
+}

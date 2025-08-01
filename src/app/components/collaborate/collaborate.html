@@ -1,0 +1,22 @@
+<div class="collaborate">
+  <div class="card">
+    <div class="content">
+      <h3 class="titleCollaborate">{{translate.translate('titleCollaborate')}}</h3>
+      <h6 class="textCollaborate">{{translate.translate('textCollaborate')}}</h6>
+      <form class="form" (ngSubmit)="submitEmail()" #emailForm="ngForm">
+      <input class="input-email"
+        type="email"
+        name="email"
+        [(ngModel)]="emailInput"
+        required
+        email
+        placeholder="{{translate.translate('inputEmail')}}"
+      />
+      <button type="submit" class="btn btn-primary btn-email">{{translate.translate('send')}}</button>
+      </form>
+
+      <p *ngIf="emailSaved">{{translate.translate('validationEmail2')}}</p>
+      <p *ngIf="invalidEmail">{{translate.translate('validationEmail1')}}</p>
+    </div>
+  </div>
+</div>

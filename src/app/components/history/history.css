@@ -1,0 +1,42 @@
+.textStory {
+  line-height: 3.5rem;
+}
+
+.history {
+  margin: 3rem;
+}
+
+.titleStory {
+  text-align: center;
+}
+
+.car {
+  display: none;
+}
+
+@media (min-width: 992px) {
+
+  .titleStory {
+    text-align: start;
+  }
+
+  .history {
+      margin: 5rem 10rem;
+    }
+
+    .textStory {
+      margin: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 5rem;
+    }
+
+  .car {
+    display: block;
+    width: 45%;
+  }
+}

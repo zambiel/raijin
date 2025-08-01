@@ -1,0 +1,49 @@
+.section-contact {
+  margin: 5rem 10rem;
+}
+
+.titleContact {
+  text-align: center;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .data {
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.inputs {
+  width: 100%;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}

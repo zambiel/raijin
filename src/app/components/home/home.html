@@ -1,0 +1,73 @@
+<app-row id="home"></app-row>
+
+<header class="header">
+  <a href="/">
+    <img class="header__logo" src="/img/logo.png" alt="logo">
+  </a>
+
+  <!-- Botón hamburguesa -->
+  <button class="hamburger" (click)="toggleMenu()">
+    <img *ngIf="!menuOpen" src="/icons/hamburger.svg" alt="menu">
+    <img *ngIf="menuOpen" src="/icons/close.svg" alt="close">
+  </button>
+
+  <!-- Menú de navegación -->
+  <nav class="navigation"  [ngClass]="{ 'navigation--open': menuOpen }">
+    <a class="navigation__link" href="#goal">{{ translate.translate('goal') }}</a>
+    <a class="navigation__link" href="#prototype">{{ translate.translate('prototype') }}</a>
+    <a class="navigation__link" href="#future">{{ translate.translate('future') }}</a>
+    <a class="navigation__link" href="#history">{{ translate.translate('story') }}</a>
+    <a class="navigation__link" href="#collaborate">{{ translate.translate('collaborate') }}</a>
+  </nav>
+
+  <a href="#contact">
+      <button class="btn btn-primary">{{ translate.translate('contactBtn') }}</button>
+  </a>
+</header>
+
+
+
+<app-hero></app-hero>
+<app-goal id="goal"></app-goal>
+<app-prototype id="prototype"></app-prototype>
+<app-future id="future"></app-future>
+<app-history id="history"></app-history>
+<app-collaborate id="collaborate"></app-collaborate>
+<app-contact id="contact"></app-contact>
+
+
+<footer class="background-footer">
+  <div class="footer">
+    <a href="#home">
+      <img class="header__logo" src="/img/logo.png" alt="logo">
+    </a>
+    <div class="navigation-local">
+      <p class="nav">{{translate.translate('nav')}}</p>
+      <nav class="navigation-footer">
+        <a class="navigation__link--footer" href="#goal">{{ translate.translate('goal') }}</a>
+        <a class="navigation__link--footer" href="#prototype">{{ translate.translate('prototype') }}</a>
+        <a class="navigation__link--footer" href="#future">{{ translate.translate('future') }}</a>
+        <a class="navigation__link--footer" href="#history">{{ translate.translate('story') }}</a>
+        <a class="navigation__link--footer" href="#collaborate">{{ translate.translate('collaborate') }}</a>
+      </nav>
+    </div>
+  <div class="privacy-policy">
+    <p class="privacy">{{translate.translate('priv')}}</p>
+    <nav class="nav-privacy">
+
+
+      <a href="#" class="privacy-link">{{ translate.translate('privacy') }}</a>
+      <a href="#" class="privacy-link">{{translate.translate('terms')}}</a>
+    </nav>
+  </div>
+  <div class="social-network">
+    <p class="social">{{translate.translate('social')}}</p>
+    <nav class="social-links">
+      <a href="https://www.youtube.com/@RaijinCarConversions" target="_blank" rel="noopener noreferrer" class="link-net">Youtube</a>
+      <a href="https://www.instagram.com/raijin_car_conversions/" target="_blank" rel="noopener noreferrer" class="link-net">Instagram</a>
+      <a href="https://www.tiktok.com/@raijin.car.conversions" target="_blank" rel="noopener noreferrer" class="link-net">Tiktok</a>
+    </nav>
+  </div>
+</div>
+</footer>
+<app-row></app-row>

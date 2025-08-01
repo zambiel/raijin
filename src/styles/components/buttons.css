@@ -1,0 +1,81 @@
+.btn {
+    font-size: 1.6rem;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.btn-primary-unselected {
+    background-color: var(--primary-400);
+}
+
+.btn-secondary-unselected {
+    background-color: var(--secondary-400);
+}
+
+.btn-accent-unselected {
+    background-color: var(--accent-400);
+}
+
+
+
+.btn-primary {
+    background-color: var(--primary-700);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-800);
+}
+
+.btn-primary:active {
+    background-color: var(--primary-900);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-500);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-600);
+}
+
+.btn-secondary:active {
+    background-color: var(--secondary-700);
+}
+
+.btn-accent {
+    background-color: var(--accent-500);
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-600);
+}
+
+.btn-accent:active {
+    background-color: var(--accent-700);
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-700);
+    color: var(--primary-700);
+}
+
+
+.btn-secondary-outline:hover, .btn-primary-outline:hover, .btn-accent-outline:hover  {
+  text-decoration: underline;
+}
+
+
+.btn-secondary-outline {
+    background-color: transparent;
+    border: 2px solid var(--secondary-500);
+    color: var(--secondary-500);
+}
+.btn-accent-outline {
+    background-color: transparent;
+    border: 2px solid var(--accent-500);
+    color: var(--accent-500);
+}

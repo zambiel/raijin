@@ -1,0 +1,51 @@
+<section class="section-contact">
+  <h2 class="titleContact">{{translate.translate('titleContact')}}</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate class="form">
+    <div class="data">
+      <div class="form-group">
+        <label for="name">{{translate.translate('name')}}</label>
+        <input class="inputs" type="text" formControlName="nombre" id="name">
+        <div *ngIf="contactForm.get('nombre')?.touched && contactForm.get('nombre')?.invalid" style="color: red;">
+          {{translate.translate('errorName')}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">{{translate.translate('email')}}</label>
+        <input class="inputs" type="email" formControlName="email" id="email">
+        <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid" style="color: red;">
+        <div *ngIf="contactForm.get('email')?.errors?.['required']">{{translate.translate('errorEmail2')}}</div>
+        <div *ngIf="contactForm.get('email')?.errors?.['email']">{{translate.translate('errorEmail')}}</div>
+    </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">{{translate.translate('phoneNumber')}}</label>
+        <input class="inputs" type="tel" formControlName="telefono" id="phone">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name">{{translate.translate('message')}}</label>
+      <textarea formControlName="mensaje" rows="10" name="message" id="message"></textarea>
+      <div *ngIf="contactForm.get('mensaje')?.touched && contactForm.get('mensaje')?.invalid" style="color: red;">
+        {{translate.translate('errorMessage')}}
+      </div>
+    </div>
+    <div class="row">
+      <button type="submit" class="btn btn-secondary btn-send">{{translate.translate('sendBtn')}}</button>
+      <div class="icons">
+        <a href="https://www.youtube.com/@RaijinCarConversions" target="_blank" rel="noopener">
+          <img src="/icons/youtube.svg" height="40" alt="1">
+        </a>
+        <a href="https://www.instagram.com/raijin_car_conversions/" target="_blank" rel="noopener">
+          <img src="/icons/instagram.svg" height="40" alt="2">
+        </a>
+        <a href="https://www.tiktok.com/@raijin.car.conversions" target="_blank" rel="noopener">
+          <img src="/icons/tiktok.svg" height="40" alt="3">
+        </a>
+      </div>
+    </div>
+    <div *ngIf="enviadoConExito" style="color: green; margin-top: 1rem; font-size: 1.7rem;">
+      {{translate.translate('success')}}
+    </div>
+  </form>
+</section>

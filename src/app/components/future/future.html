@@ -1,0 +1,14 @@
+<section class="future">
+  <div class="content">
+    <h2 class="titleFuture">{{translate.translate('titleFuture')}}</h2>
+    <h5 class="subtitle-future">{{translate.translate('subtitleFuture')}}</h5>
+  </div>
+  <div class="container">
+    <div class="cards">
+      <div class="card" *ngFor="let brand of brands; let i = index">
+        <img src="/img/brands/brand{{i + 1}}.svg" alt="toyota">
+        <p class="card-text">{{brand}}</p>
+      </div>
+    </div>
+  </div>
+</section>
