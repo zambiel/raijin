@@ -9,4 +9,3 @@ bootstrapApplication(App, {
     provideRouter(routes)
   ]
 })
-
